@@ -1,86 +1,30 @@
-const k= document.querySelector(".imgr");
-const l= document.querySelector(".imgp");
-const m= document.querySelector(".imgs");
-const p=document.querySelector(".play");
-const q=document.querySelector(".yo");
-const r=document.querySelector(".com");
-console.log(q);
- let count=0;
- let comscore=0;
-    k.onclick=()=>{
-        let z = Math.floor(Math.random() * 3) + 1;
-    var a=1;
-    console.log(a);
-    if(z==1){
-        console.log("draw");
-        p.innerHTML="GAME IS DRAW! play again";
-        p.style.backgroundColor='orange';
-     }
-     else if(z==2){
-        p.innerHTML="YOU LOST";
-        p.style.backgroundColor='red';
-        comscore++;
-        r.innerHTML=comscore;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div class="text"><h1><b>STONE PAPER SCISSOR </b></h1></div>
+    <div class="images">
+       <div class="imgr" class="a"><img src="rock.png" alt="" width="200px" style="border-radius: 100%;" > </div>
+       <div class="imgp" class="b"><img src="paper.png" alt="" width="200px" style="border-radius: 100%;"> </div>
+       <div class="imgs" class="c"><img src="image.png" alt=""  width="200px"  style="border-radius: 100%;"> </div>
+    </div>
+    <div class="score">
+        <div class="you">
+            <div class="yo"><h2>0</h2></div>
+           <div ><h2>you</h2></div> 
 
-    }
-    else if(z==3){
-     p.innerHTML="YOU WON!";
-     p.style.backgroundColor='green';   
-     count++;
-     q.innerHTML=count;
-        
-    }
-
-}
-l.onclick=()=>{
-    let z = Math.floor(Math.random() * 3) + 1;
-    var b=2;
-    console.log(b);
-     if(z==2){
-        console.log("draw");
-        p.innerHTML="GAME IS DRAW! play again";
-        p.style.backgroundColor = 'orange';
-    }
-    else if(z==1){
-        p.innerHTML="YOU WON!";
-        p.style.backgroundColor='green';
-        count++;
-        q.innerHTML=count;
-
-    }
-   else if(z==3){
-     p.innerHTML="YOU LOST!";
-        p.style.backgroundColor='red';
-        comscore++;  
-         r.innerHTML=comscore; 
-        
-    }
-   
-   
-}
-m.onclick=()=>{
-    let z = Math.floor(Math.random() * 3) + 1;
-    var c=3;
-    console.log(c);
-     if(z==3){
-        console.log("draw");
-        p.innerHTML="GAME IS DRAW! play again";
-        p.style.backgroundColor = 'red';
-    }
-   else if(z==1){
-        p.innerHTML="YOU LOST!";
-        p.style.backgroundColor='red';
-        comscore++;
-        r.innerHTML=comscore;
-
-    }
-   else if(z==2){
-     p.innerHTML="YOU WON!";
-        p.style.backgroundColor='green';   
-        count++;
-        q.innerHTML=count;
-        
-    }
-   
-   
-}
+        </div>
+        <div class="you">
+           <div class="com"> <h2 >0</h2></div>
+           <div> <h2>computer</h2></div>
+        </div>
+    </div>
+    <div class="play"><h1>play your game</h1></div>
+     <script src="script.js"></script>
+</body>
+</html>
